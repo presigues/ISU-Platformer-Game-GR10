@@ -14,34 +14,34 @@ public class Constants {
 		public static final int HIT = 2;
 		public static final int DEAD = 1;
 		
-		public static final int ENEMY_WIDTH_DEFAULT = 50;
-		public static final int ENEMY_HEIGHT_DEFAULT = 60;
+		public static final int ENEMY_WIDTH_DEFAULT = 82;
+		public static final int ENEMY_HEIGHT_DEFAULT = 80;
 		
 		public static final int ENEMY_WIDTH = (int) (ENEMY_WIDTH_DEFAULT * Game.SCALE);
 		public static final int ENEMY_HEIGHT = (int) (ENEMY_HEIGHT_DEFAULT * Game.SCALE);
 		
-		public static final int DOGGO_DRAWOFFSET_X = (int)(28 * Game.SCALE);
+		public static final int DOGGO_DRAWOFFSET_X = (int)(20 * Game.SCALE);
 
-		public static final int DOGGO_DRAWOFFSET_Y = (int)(30 * Game.SCALE);
+		public static final int DOGGO_DRAWOFFSET_Y = (int)(38 * Game.SCALE);
 		
 		public static final int GetSpriteAmount(int enemy_type, int enemy_state) {
 			switch(enemy_type) {
 			case ENEMY:
 				switch(enemy_state) {
 				case IDLE:
-					return 9;
+					return 3;
 				case RUNNING:
-					return 6;
-				case ATTACK:
-					return 7;
-				case HIT:
 					return 4;
+				case ATTACK:
+					return 4;
+				case HIT:
+					return 1;
 					
 				case DEAD:
-					return 5;
+					return 4;
 				}
 			}
-			return 3;
+			return 0;
 		}
 		
 		
@@ -115,7 +115,7 @@ public class Constants {
 			public static final int RUNNING = 4;
 			public static final int HURT = 2;
 			public static final int DEATH = 1;
-			public static final int ATTACK_1 = 0;
+			public static final int ATTACK = 0;
 			
 
 			public static int GetSpriteAmount(int player_action) {
@@ -124,7 +124,7 @@ public class Constants {
 					return 4;
 				case IDLE:
 					return 3;
-			    case ATTACK_1:
+			    case ATTACK:
 				    return 0;
 			    case HURT:
 					return 2;

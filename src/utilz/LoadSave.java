@@ -35,7 +35,7 @@ public class LoadSave {
 	
 	public static final String VOLUME_BUTTONS = "volume_buttons.png";
 	
-	public static final String MENU_BACKGROUND_IMG = "background_menu.png";
+	public static final String MENU_BACKGROUND_IMG = "back.png";
 	
 	public static final String PLAYING_BG_IMG = "playing_bg_img.png";
 	
@@ -44,6 +44,8 @@ public class LoadSave {
 	public static final String SMALL_CLOUDS = "small_clouds.png";
 	
 	public static final String ENEMY_SPRITE = "enemy_sprite.png";
+	
+	public static final String STATUS_BAR = "Health_Bar.png";
 	
 	
 	
@@ -56,17 +58,27 @@ public class LoadSave {
 		BufferedImage img = null;
 		InputStream is = LoadSave.class.getResourceAsStream("/" + fileName);
 		try {
+			
 			img = ImageIO.read(is);
 
-		} catch (IOException e) {
+		} 
+		
+		catch (IOException e) {
 			e.printStackTrace();
-		} finally {
+		} 
+		
+		finally {
+			
 			try {
+				
 				is.close();
-			} catch (IOException e) {
+			} 
+			
+			catch (IOException e) {
 				e.printStackTrace();
 			}
 		}
+		
 		return img;
 	}
 	
